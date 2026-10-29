@@ -1,0 +1,76 @@
+:root {
+  font-family: "Dela Gothic One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.root_gradient-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(0deg,
+      #818cf8 0%,
+      #818cf8 5%,
+      rgb(110, 145, 248) 15%,
+      rgb(96, 165, 250) 30%,
+      rgb(125, 190, 251) 45%,
+      rgb(160, 210, 252) 60%,
+      rgb(200, 228, 253) 75%,
+      rgb(230, 241, 255) 90%,
+      #ffffff 100%);
+  z-index: -1;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+}
+
+.main_tittle {
+  font-size: 35px;
+  color: #1f0788;
+}
+
+.main_name {
+  width: 270px;
+  padding: 3px;
+  border-radius: 20px;
+  border: 2px solid #1f0788;
+  display: flex;
+  align-items: center;
+  background-color: rgb(from #1f0f64 r g b / 60%);
+}
+
+.main_input {
+  flex: 1;
+  background-color: transparent;
+  padding-left: 15px;
+  color: black;
+
+}
+
+.main_input::placeholder {
+  color: white;
+}
+
+.main_button {
+  height: 100%;
+  display: block;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: white;
+  color: #38248f;
+}
+
+.main_description {
+  font-size: 15px;
+  position: absolute;
+  bottom: 60px;
+  color: #15055e;
+}

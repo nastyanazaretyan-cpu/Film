@@ -41,6 +41,19 @@ function GamePage() {
     return (
         <main className="workspace">
             <Header />
+
+            <div className="progress_wrapper">
+                <div className="progress_bar">
+                    <div
+                        className="progress_fill"
+                        style={{
+                            width: `${(session.votes.length / session.order.length) * 100}%`
+                        }}
+                    ></div>
+                </div>
+                <span className="progress_text">{Math.round((session.votes.length / session.order.length) * 100)}%</span>
+            </div>
+
             <div className="swipe-area">
                 {movie && (
                     <Fragment key={movie.id}>
@@ -73,14 +86,6 @@ function GamePage() {
                         disabled={!session.votes.length}
                     >
                         <RotateCcw size={17} /> Отменить
-                    </button>
-                    <button
-                        onClick={() => {
-                            nav(session.role === 1 ? "/share" : "result", { replace: true });
-                        }}
-                        disabled={session.votes.length !== session.order.length}
-                    >
-                        Завершить
                     </button>
                 </div>
             </div>

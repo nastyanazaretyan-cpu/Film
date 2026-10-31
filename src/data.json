@@ -4,104 +4,104 @@
         "title": "Дьявол носит Prada",
         "year": 2006,
         "genre": "Комедия · Драма",
-        "poster": ""
+        "poster": "/the-devil-wears-prada.jpg"
     },
     {
         "id": "m02",
         "title": "Менталист",
         "year": 2015,
         "genre": "Детектив · Триллер",
-        "poster": ""
+        "poster": "/mentalist_12.jpg"
     },
     {
         "id": "m03",
         "title": "Декстер",
         "year": 2006,
         "genre": "Криминал · Триллер",
-        "poster": ""
+        "poster": "/Dekster.jpg"
     },
     {
         "id": "m04",
         "title": "Душа",
         "year": 2020,
         "genre": "Анимация · Семейный",
-        "poster": ""
+        "poster": "/Soul.jpg"
     },
     {
         "id": "m05",
         "title": "Гарри Поттер и философский камень",
         "year": 2001,
         "genre": "Фэнтези · Приключения",
-        "poster": ""
+        "poster": "/Harry_Potter.jpg"
     },
     {
         "id": "m06",
         "title": "Человек-паук: Через вселенные",
         "year": 2018,
         "genre": "Анимация · Приключения",
-        "poster": ""
+        "poster": "/spider_man.jpg"
     },
     {
         "id": "m07",
         "title": "Шерлок",
         "year": 2010,
         "genre": "Детектив · Драма",
-        "poster": ""
+        "poster": "/sherlock.jpg"
     },
     {
         "id": "m08",
         "title": "Ла-Ла Ленд",
         "year": 2016,
         "genre": "Мюзикл · Мелодрама",
-        "poster": ""
+        "poster": "/la-la-lend.jpg"
     },
     {
         "id": "m09",
         "title": "Голодные игры",
         "year": 2012,
         "genre": "Фантастика · Боевик",
-        "poster": ""
+        "poster": "/Hunger_Games.jpg"
     },
     {
         "id": "m10",
         "title": "Барби",
         "year": 2023,
         "genre": "Комедия · Фентези",
-        "poster": ""
+        "poster": "/barbi.jpg"
     },
     {
         "id": "m11",
         "title": "1+1",
         "year": 2011,
         "genre": "Комедия · Драма",
-        "poster": ""
+        "poster": "/1+1.jpg"
     },
     {
         "id": "m12",
-        "title": "Тайна Коко",
-        "year": 2017,
-        "genre": "Анимация · Семейный",
-        "poster": ""
+        "title": "Субстанция",
+        "year": 2024,
+        "genre": "Ужасы · Сатира",
+        "poster": "/substation.jpg"
     },
     {
         "id": "m13",
         "title": "Матрица",
         "year": 1999,
         "genre": "Фантастика · Боевик",
-        "poster": ""
+        "poster": "/матрица.jpg"
     },
     {
         "id": "m14",
-        "title": "Назад в будущее",
-        "year": 1985,
-        "genre": "Фантастика · Комедия",
-        "poster": ""
+        "title": "Солнцестояние",
+        "year": 2019,
+        "genre": "Триллер · Драма",
+        "poster": "/Midsommar.jpg"
     },
     {
         "id": "m15",
-        "title": "Как приручить дракона",
-        "year": 2010,
-        "genre": "Анимация · Приключения",
-        "poster": ""
+        "title": "Астрал: Ритуал Малум",
+        "year": 2023,
+        "genre": "Ужасы · Триллер",
+        "poster": "/astral.png"
     }
 ]

@@ -72,6 +72,7 @@
 
 .main_input {
   flex: 1;
+  min-width: 0;
   background-color: transparent;
   padding-left: 15px;
   color: rgb(167, 182, 248);
@@ -83,6 +84,7 @@
 }
 
 .main_button {
+  flex-shrink: 0;
   height: 100%;
   display: block;
   aspect-ratio: 1/1;

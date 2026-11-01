@@ -38,14 +38,7 @@ function ResultPage() {
     return (
         <main className="workspace">
             <Header />
-            {randomMovieChosen && (
-                <div className="result-top-actions">
-                    <button onClick={handleRestart}>
-                        <RotateCcw size={16} />
-                        Начать заново
-                    </button>
-                </div>
-            )}
+
             <section className="result-area">
                 <nav className="result-tabs">
                     <button className={tab === "matches" ? "active" : ""} onClick={() => setTab("matches")}>
@@ -93,7 +86,7 @@ function ResultPage() {
                     >
                         <RotateCcw size={16} /> Начать снова
                     </button>
-                    {tab === "matches" && commonMovies.length > 0 && (
+                    {tab === "matches" && commonMovies.length > 1 && (
                         <RandomMovie matches={commonMovies}
                             onMovieSelected={() => setRandomMovieChosen(true)} />)}
                 </div>

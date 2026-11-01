@@ -13,7 +13,6 @@ function ResultPage() {
     const s = readSession();
     const [tab, setTab] = useState<"matches" | "personal">("matches");
     const [person, setPerson] = useState<1 | 2>(2);
-    const [randomMovieChosen, setRandomMovieChosen] = useState(false);
     const handleRestart = () => {
         clearSession(); nav("/");
     };
@@ -81,11 +80,8 @@ function ResultPage() {
                     <button onClick={handleRestart}>
                         <RotateCcw size={16} /> Начать снова
                     </button>
-                    {tab === "matches" && commonMovies.length > 1 && !randomMovieChosen && (
-                        <RandomMovie
-                            matches={commonMovies}
-                            onMovieSelected={() => setRandomMovieChosen(true)}
-                        />
+                    {tab === "matches" && commonMovies.length > 1 && (
+                        <RandomMovie matches={commonMovies} />
                     )}
                 </div>
             </section>

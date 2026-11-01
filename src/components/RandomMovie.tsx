@@ -19,7 +19,7 @@ export interface Movie {
 interface RandomMovieProps {
 
     matches: Movie[];
-    onMovieSelected: () => void
+    onMovieSelected?: () => void
 
 }
 
@@ -72,7 +72,7 @@ export default function RandomMovie({
             setSelectedMovie(randomMovie);
             setPreviousMovieId(randomMovie.id);
             setIsRolling(false);
-            onMovieSelected();
+            onMovieSelected?.();
         }, 400);
     }
 

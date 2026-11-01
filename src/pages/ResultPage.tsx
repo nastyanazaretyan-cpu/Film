@@ -78,17 +78,15 @@ function ResultPage() {
                     </div>
                 )}
                 <div className="result-footer">
-                    <button
-                        onClick={() => {
-                            clearSession();
-                            nav("/");
-                        }}
-                    >
+                    <button onClick={handleRestart}>
                         <RotateCcw size={16} /> Начать снова
                     </button>
-                    {tab === "matches" && commonMovies.length > 1 && (
-                        <RandomMovie matches={commonMovies}
-                            onMovieSelected={() => setRandomMovieChosen(true)} />)}
+                    {tab === "matches" && commonMovies.length > 1 && !randomMovieChosen && (
+                        <RandomMovie
+                            matches={commonMovies}
+                            onMovieSelected={() => setRandomMovieChosen(true)}
+                        />
+                    )}
                 </div>
             </section>
         </main>

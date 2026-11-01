@@ -869,3 +869,254 @@ body.dark {
     animation: none !important;
   }
 }
+
+.result-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Заголовок «Ваш фильм на сегодня» */
+
+.random-movie h2 {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.dark .random-movie h2 {
+  color: #5f99cf;
+}
+
+/* Единый размер постеров фильмов */
+
+.random-movie img {
+  width: 300px;
+  height: 450px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+}
+
+@media(max-width: 600px) {
+  .random-movie h2 {
+    font-size: 26px;
+  }
+
+  .random-movie img {
+    width: 180px;
+    height: 260px;
+  }
+
+}
+
+.random-movie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.dark .random-movie p {
+  color: #5f99cf;
+}
+
+.random-movie__button {
+  background: #0a216e;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 14px;
+  padding: 14px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.random-movie__button:hover {
+  background: #0a1347;
+  transform: translateY(-2px);
+}
+
+.random-movie__result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 320px;
+  padding: 20px;
+  background: #FFFFFF;
+  border: 1px solid #E5CDD3;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(71, 10, 22, 0.08);
+  animation: movieAppear 0.4s ease;
+}
+
+.random-movie__result img {
+  width: 100%;
+  max-width: 220px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.random-movie__result h2 {
+  color: #0a1047;
+  font-size: 21px;
+  text-align: center;
+  margin: 5px 0;
+}
+
+.dark .random-movie__result h2 {
+  color: #5f99cf;
+}
+
+.random-movie-result p {
+  color: #7a809b;
+  font-size: 14px;
+  text-align: center;
+}
+
+@keyframes movieAppear {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+@media(max-width:600px) {
+  .random-movie-button {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .random-movie-result {
+    max-width: 100%;
+  }
+}
+
+/* Кнопка возврата наверх */
+.result-top-actions {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: 1100px;
+  margin: 15px auto 25px;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.result-top-actions button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 12px 22px;
+  background: #0c0a6e;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.result-top-actions button:hover {
+  background: #0a1847;
+  transform: translateY(-2px);
+}
+
+/* Карточка случайного фильма */
+.random-movie-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% - 40px);
+  max-width: 380px;
+  margin: 25px auto;
+  padding: 25px;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border: 1px solid #E5CDD3;
+  border-radius: 22px;
+  box-shadow: 0 8px 25px rgba(71, 10, 22, 0.08);
+  animation: movieAppear 0.4s ease;
+}
+
+.random-movie-result img {
+  display: block;
+  width: 100%;
+  max-width: 250px;
+  height: 340px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 14px;
+}
+
+.random_tittle {
+  color: #080e3f;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 16px;
+  overflow-wrap: anywhere;
+}
+
+.dark .random_tittle {
+  color: #5f99cf;
+}
+
+.dark .random-movie-result h3 {
+  color: #979dc7;
+}
+
+.random-movie-result p {
+  color: #807a9b;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Адаптация для телефонов */
+
+@media(max-width: 600px) {}
+
+.result-top-actions {
+  justify-content: center;
+  padding: 0 16px;
+}
+
+.result-top-actions button {
+  width: 100%;
+  max-width: 320px;
+}
+
+.random-movie-result {
+  width: calc(100% - 32px);
+  max-width: 340px;
+  padding: 18px;
+  margin: 20px auto;
+}
+
+.random-movie-result img {
+  max-width: 210px;
+  height: 290px;
+}
+
+.random-movie-result h3 {
+  font-size: 19px;
+
+}

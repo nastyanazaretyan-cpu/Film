@@ -5,12 +5,18 @@ import { Header } from "../components/header";
 import { Intro } from "../components/Intro";
 import { Poster } from "../components/Poster";
 import { clearSession, matches, movies, readSession } from "../model";
+import RandomMovie from "../components/RandomMovie";
+import type { Movie } from "../model";
 
 function ResultPage() {
     const nav = useNavigate();
     const s = readSession();
     const [tab, setTab] = useState<"matches" | "personal">("matches");
     const [person, setPerson] = useState<1 | 2>(2);
+    const [randomMovieChosen, setRandomMovieChosen] = useState(false);
+    const handleRestart = () => {
+        clearSession(); nav("/");
+    };
 
     if (!s || s.role !== 2 || !s.first || s.votes.length !== s.order.length)
         return (
@@ -26,10 +32,20 @@ function ResultPage() {
 
     const mine = s.votes.filter((v) => v.liked).map((v) => v.id);
     const shown = tab === "matches" ? matches(s.first.likes, mine) : person === 1 ? s.first.likes : mine;
+    const commonIds = matches(s.first.likes, mine);
+    const commonMovies = movies.filter((movie: Movie) => commonIds.includes(movie.id));
 
     return (
         <main className="workspace">
             <Header />
+            {randomMovieChosen && (
+                <div className="result-top-actions">
+                    <button onClick={handleRestart}>
+                        <RotateCcw size={16} />
+                        Начать заново
+                    </button>
+                </div>
+            )}
             <section className="result-area">
                 <nav className="result-tabs">
                     <button className={tab === "matches" ? "active" : ""} onClick={() => setTab("matches")}>
@@ -49,6 +65,7 @@ function ResultPage() {
                         </button>
                     </div>
                 )}
+
                 {shown.length ? (
                     <div className="movie-grid">
                         {shown.map((id) => {
@@ -76,6 +93,9 @@ function ResultPage() {
                     >
                         <RotateCcw size={16} /> Начать снова
                     </button>
+                    {tab === "matches" && commonMovies.length > 0 && (
+                        <RandomMovie matches={commonMovies}
+                            onMovieSelected={() => setRandomMovieChosen(true)} />)}
                 </div>
             </section>
         </main>
